@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KiloCalc - Calculadora de TMB</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos Gerais */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        header img {
+            max-width: 150px;
+        }
+        nav {
+            margin-top: 10px;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #1abc9c;
+        }
+        section {
+            padding: 60px 20px;
+        }
+        h2 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5em;
+            position: relative;
+        }
+        h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: #1abc9c;
+            margin: 10px auto 0;
+        }
+        .swiper-container {
+            width: 100%;
+            height: 400px;
+            margin-bottom: 60px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #e0e0e0;
+        }
+        .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .team {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .team-member {
+            text-align: center;
+            margin: 20px;
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .team-member:hover {
+            transform: translateY(-10px);
+        }
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .gallery img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        footer {
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+        footer a {
+            color: #1abc9c;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        footer a:hover {
+            color: #16a085;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+            <img src="https://i.ibb.co/3yPkGW2p/Uni-Fil-Logo-Vertical-01.png" style="width: 80px; height: 72px">
+        </a>
+        <h1>KiloCalc: Calculadora de Taxa Metabólica Basal (TMB)</h1>
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#proposta">Proposta</a>
+            <a href="#quem-somos">Quem Somos</a>
+            <a href="#telas-web">Telas Web</a>
+            <a href="#diagramas">Diagramas</a>
+        </nav>
+    </header>
+
+    <!-- Seção Inicial (Hero Section) -->
+    <section id="inicio">
+        <h2>Bem-vindo ao KiloCalc</h2>
+        <p>A KiloCalc é uma ferramenta inovadora que calcula a Taxa Metabólica Basal (TMB), ajudando usuários a entender quantas calorias seu corpo precisa diariamente para manter suas funções vitais. Ideal para quem busca uma vida saudável e equilibrada!</p>
+        <!-- Carrossel de Imagens -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="https://blog.gsuplementos.com.br/wp-content/uploads/2024/08/iStock-1174616486-1-scaled.webp" alt="Saúde e Nutrição"></div>
+                <div class="swiper-slide"><img src="https://i0.wp.com/blog.portaleducacao.com.br/wp-content/uploads/2022/02/365-O-que-e%CC%81-tecnologia_.jpg" alt="Tecnologia"></div>
+                <div class="swiper-slide"><img src="https://i0.wp.com/naturvida.com.br/wp-content/uploads/2021/05/saude-e-bem-estar.jpg?w=640&ssl=1" alt="Calculadora"></div>
+            </div>
+            <!-- Botões de Navegação -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+
+    <!-- Seção Proposta -->
+    <section id="proposta">
+        <h2>Nossa Proposta</h2>
+        <p>Nosso objetivo é fornecer uma ferramenta simples e acessível para que qualquer pessoa possa calcular sua TMB e, assim, planejar dietas, exercícios e hábitos mais saudáveis. A KiloCalc é para todos: de atletas a pessoas que buscam melhorar sua qualidade de vida.</p>
+    </section>
+
+    <!-- Seção Extensão Curricular -->
+    <section id="extensao-curricular">
+        <h2>Extensão Curricular</h2>
+        <p>Este projeto faz parte de uma iniciativa de extensão curricular, integrando conhecimentos teóricos e práticos para desenvolver soluções que impactem positivamente a sociedade.</p>
+    </section>
+
+    <!-- Seção Quem Somos -->
+    <section id="quem-somos">
+        <h2>Quem Somos</h2>
+        <div class="team">
+            <div class="team-member">
+                <img src="https://via.placeholder.com/150" alt="João Silva">
+                <h3>João Silva</h3>
+                <p>Desenvolvedor Front-end: Responsável pela interface do usuário e experiência interativa.</p>
+            </div>
+            <div class="team-member">
+                <img src="https://via.placeholder.com/150" alt="Maria Souza">
+                <h3>Maria Souza</h3>
+                <p>Desenvolvedora Back-end: Responsável pela lógica e integração de dados.</p>
+            </div>
+            <div class="team-member">
+                <img src="https://via.placeholder.com/150" alt="Pedro Oliveira">
+                <h3>Pedro Oliveira</h3>
+                <p>Designer UI/UX: Responsável pelo design e usabilidade do aplicativo.</p>
+            </div>
+            <div class="team-member">
+                <img src="https://via.placeholder.com/150" alt="Ana Costa">
+                <h3>Ana Costa</h3>
+                <p>Gerente de Projeto: Coordenação e planejamento das atividades.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Telas Web -->
+    <section id="telas-web">
+        <h2>Telas Web</h2>
+        <div class="gallery">
+            <img src="https://via.placeholder.com/400" alt="Tela de Cálculo">
+            <img src="https://via.placeholder.com/400" alt="Tela de Resultados">
+            <img src="https://via.placeholder.com/400" alt="Tela de Configurações">
+        </div>
+    </section>
+
+    <!-- Seção Diagramas -->
+    <section id="diagramas">
+        <h2>Diagramas do Projeto</h2>
+        <div class="gallery">
+            <img src="https://via.placeholder.com/400" alt="Fluxograma">
+            <img src="https://via.placeholder.com/400" alt="Diagrama de Banco de Dados">
+            <img src="https://via.placeholder.com/400" alt="Arquitetura do Sistema">
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>Contato: <a href="mailto:email@exemplo.com">email@exemplo.com</a> | Redes Sociais: <a href="#">Instagram</a>, <a href="#">LinkedIn</a></p>
+        <p>Desenvolvido por Equipe KiloCalc - 2023</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        // Inicialização do Swiper (Carrossel)
+        const swiper = new Swiper('.swiper-container', {
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 3000,
+            },
+        });
+    </script>
+</body>
+</html>
