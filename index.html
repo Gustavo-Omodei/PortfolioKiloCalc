@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CalcKal - Calculadora de TMB</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Estilos Gerais */
+      body {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f9;
+        color: #333;
+      }
+      header {
+        background: linear-gradient(135deg, #2c3e50, #34495e);
+        color: white;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      header img {
+        max-width: 150px;
+      }
+      nav {
+        margin-top: 10px;
+      }
+      nav a {
+        color: white;
+        margin: 0 15px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.3s ease;
+      }
+      nav a:hover {
+        color: #1abc9c;
+      }
+      section {
+        padding: 60px 20px;
+      }
+      h2 {
+        color: #2c3e50;
+        text-align: center;
+        margin-bottom: 40px;
+        font-size: 2.5em;
+        position: relative;
+      }
+      h2::after {
+        content: "";
+        display: block;
+        width: 60px;
+        height: 4px;
+        background: #1abc9c;
+        margin: 10px auto 0;
+      }
+      .swiper-container {
+        width: 100%;
+        height: 800px;
+        margin-bottom: 60px;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      }
+      .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #e0e0e0;
+      }
+      .swiper-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .team {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
+      .team-member {
+        text-align: center;
+        margin: 20px;
+        background: white;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+      .team-member:hover {
+        transform: translateY(-10px);
+      }
+      .team-member img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 15px;
+      }
+      p {
+        text-align: center;
+        margin-left: 100px;
+        margin-right: 100px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+      }
+      .gallery img {
+        width: 100%;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+      .gallery img:hover {
+        transform: scale(1.05);
+      }
+      footer {
+        background: linear-gradient(135deg, #2c3e50, #34495e);
+        color: white;
+        text-align: center;
+        padding: 40px 20px;
+        margin-top: 60px;
+      }
+      footer a {
+        color: #1abc9c;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+      footer a:hover {
+        color: #16a085;
+      }
+      #proposta {
+        text-align: center;
+        padding: 20px;
+      }
+
+      .container-proposta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px; /* Espaçamento entre os itens */
+      }
+
+      .card {
+        background-color: #ffff;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        width: 800px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Cabeçalho -->
+    <header>
+      <a href="https://www.sua-instituicao.com">
+        <img src="https://via.placeholder.com/150" alt="Logo da Instituição" />
+      </a>
+      <h1>CalcKal: Calculadora de Taxa Metabólica Basal (TMB)</h1>
+      <nav>
+        <a href="#inicio">Início</a>
+        <a href="#proposta">Proposta</a>
+        <a href="#quem-somos">Quem Somos</a>
+        <a href="#telas-web">Telas Web</a>
+        <a href="#diagramas">Diagramas</a>
+      </nav>
+    </header>
+
+    <!-- Seção Inicial (Hero Section) -->
+    <section id="inicio">
+      <h2>Bem-vindo ao CalcKal</h2>
+      <p>
+        Seja bem-vindo ao MetaCalc, o app que ajuda você a calcular sua Taxa
+        Metabólica Basal (TMB) de forma rápida, precisa e gratuita. Descubra
+        como entender melhor o seu metabolismo e otimizar sua saúde de maneira
+        simples e acessível. Nosso objetivo é fornecer um cálculo confiável e
+        intuitivo, utilizando fórmulas baseadas em ciência, explicações
+        detalhadas e sugestões personalizadas. Com o MetaCalc, você pode
+        calcular sua TMB, entender seu gasto calórico diário e obter insights
+        sobre nutrição e bem-estar, seja para perda de peso, ganho de massa ou
+        manutenção.
+      </p>
+      <!-- Carrossel de Imagens -->
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <img
+              src="https://blog.gsuplementos.com.br/wp-content/uploads/2024/08/iStock-1174616486-1-scaled.webp"
+              alt="Saúde e Nutrição"
+            />
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <img
+              src="https://i0.wp.com/blog.portaleducacao.com.br/wp-content/uploads/2022/02/365-O-que-e%CC%81-tecnologia_.jpg"
+              alt="Tecnologia"
+            />
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <img
+              src="https://i0.wp.com/naturvida.com.br/wp-content/uploads/2021/05/saude-e-bem-estar.jpg?w=640&ssl=1"
+              alt="Calculadora"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Proposta -->
+    <section id="proposta">
+      <h2>Nossa Proposta</h2>
+      <div class="container-proposta">
+        <div class="card">
+          <h3>Inovação no Cálculo Metabólico</h3>
+          <p>
+            O <strong>KiloCalc</strong> revoluciona a forma como você entende
+            seu metabolismo. Em vez de depender de cálculos manuais e fórmulas
+            complexas, o app oferece uma abordagem intuitiva e automatizada,
+            tornando o processo mais rápido, acessível e preciso.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Acesso e Inclusão</h3>
+          <p>
+            O conhecimento sobre o metabolismo e a nutrição deve estar ao
+            alcance de todos. O <strong>KiloCalc</strong> facilita o acesso a
+            informações essenciais para quem deseja gerenciar seu peso, melhorar
+            sua saúde e alcançar seus objetivos.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Impacto na Saúde</h3>
+          <p>
+            Entender sua <strong>Taxa Metabólica Basal (TMB)</strong> pode
+            transformar sua rotina de saúde e bem-estar. O
+            <strong>KiloCalc</strong> ajuda você a tomar decisões mais
+            informadas sobre alimentação e exercícios.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Preparação para o Futuro</h3>
+          <p>
+            Com a crescente busca por hábitos saudáveis, o
+            <strong>KiloCalc</strong> se torna uma ferramenta indispensável para
+            quem deseja planejar melhor sua alimentação e treinos.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Extensão Curricular -->
+    <section id="extensao-curricular">
+      <h2>Extensão Curricular</h2>
+      <p>
+        Este projeto faz parte de uma iniciativa de extensão curricular,
+        integrando conhecimentos teóricos e práticos para desenvolver soluções
+        que impactem positivamente a sociedade.
+      </p>
+    </section>
+
+    <!-- Seção Quem Somos -->
+    <section id="quem-somos">
+      <h2>Quem Somos</h2>
+      <div class="team">
+        <div class="team-member">
+          <img
+            src="https://static.wixstatic.com/media/4cab2d_9dde3ed824634c9ca95f927d7b7a1c5f~mv2.jpg/v1/fill/w_444,h_393,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/4cab2d_9dde3ed824634c9ca95f927d7b7a1c5f~mv2.jpg"
+            alt="João Silva"
+          />
+          <h3>Felipe Ehara</h3>
+          <p>
+            Desenvolvedor Front-end: Responsável pela interface do usuário e
+            experiência interativa.
+          </p>
+        </div>
+        <div class="team-member">
+          <img
+            src="https://static.wixstatic.com/media/4cab2d_e57392f0dfcb411c9a5de85021a1e237~mv2.jpg/v1/fill/w_444,h_393,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/4cab2d_e57392f0dfcb411c9a5de85021a1e237~mv2.jpg"
+            alt="Maria Souza"
+          />
+          <h3>Gustavo Omodei</h3>
+          <p>
+            Desenvolvedora Back-end: Responsável pela lógica e integração de
+            dados.
+          </p>
+        </div>
+        <div class="team-member">
+          <img
+            src="https://static.wixstatic.com/media/4cab2d_ecd6107b2562420d8c0987f56fb4687e~mv2.jpg/v1/fill/w_444,h_393,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/4cab2d_ecd6107b2562420d8c0987f56fb4687e~mv2.jpg"
+            alt="Pedro Oliveira"
+          />
+          <h3>Artur Luiz</h3>
+          <p>
+            Designer UI/UX: Responsável pelo design e usabilidade do aplicativo.
+          </p>
+        </div>
+        <div class="team-member">
+          <img
+            src="https://static.wixstatic.com/media/4cab2d_8fc027d5dfd242afb8327de7bd2407e6~mv2.jpg/v1/fill/w_444,h_393,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/4cab2d_8fc027d5dfd242afb8327de7bd2407e6~mv2.jpg"
+            alt="Ana Costa"
+          />
+          <h3>Guilherme Ramos</h3>
+          <p>Gerente de Projeto: Coordenação e planejamento das atividades.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Telas Web -->
+    <section id="telas-web">
+      <h2>Telas Web</h2>
+      <div class="gallery">
+        <img
+          src="https://i.ibb.co/wFy3hk63/Sem-t-tulo.png"
+          alt="Tela de Cálculo"
+        />
+        <img
+          src="https://i.ibb.co/pvFSC08b/tela-de-resultado.png"
+          alt="Tela de Resultados"
+        />
+      </div>
+    </section>
+
+    <!-- Seção Diagramas -->
+    <section id="diagramas">
+      <h2>Diagramas do Projeto</h2>
+      <div class="gallery">
+        <img src="https://via.placeholder.com/400" alt="Fluxograma" />
+        <img
+          src="https://via.placeholder.com/400"
+          alt="Diagrama de Banco de Dados"
+        />
+        <img
+          src="https://via.placeholder.com/400"
+          alt="Arquitetura do Sistema"
+        />
+      </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+      <p>
+        Contato: <a href="mailto:email@exemplo.com">email@exemplo.com</a> |
+        Redes Sociais: <a href="#">Instagram</a>, <a href="#">LinkedIn</a>
+      </p>
+      <p>Desenvolvido por Equipe CalcKal - 2023</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      // Inicialização do Swiper (Carrossel)
+      const swiper = new Swiper(".swiper-container", {
+        loop: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        autoplay: {
+          delay: 3000,
+        },
+      });
+    </script>
+  </body>
+</html>
