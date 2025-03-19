@@ -18,7 +18,7 @@
         font-family: "Poppins", sans-serif;
         margin: 0;
         padding: 0;
-        background-color: #f4f4f9;
+        background: linear-gradient(135deg, #1a1a1a, #2c3e50);
         color: #333;
       }
     
@@ -170,28 +170,7 @@
         color: #16a085;
       }
     
-      /* Estilo para a seção de proposta */
-      #proposta {
-        text-align: center;
-        padding: 20px;
-      }
-    
-      .container-proposta {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px; /* Espaçamento entre os itens */
-      }
-    
-      .card {
-        background-color: #ffff;
-        padding: 15px;
-        border-radius: 10px;
-        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-        width: 800px;
-        text-align: center;
-      }
-    
+
       /* Estilo para a galeria de telas web */
       #telas-web .gallery {
         display: flex;
@@ -207,6 +186,194 @@
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       }
+
+     
+       /* Estilo para a seção Extensão Curricular */
+  #extensao-curricular {
+    background: linear-gradient(135deg, #1a1a1a, #2c3e50); /* Fundo gradient dark */
+    padding: 80px 20px; /* Espaçamento interno */
+    text-align: center; /* Centraliza o conteúdo */
+  }
+
+  #extensao-curricular h2 {
+    color: #1abc9c; /* Cor destacada para o título */
+    font-size: 2.8em; /* Tamanho maior para o título */
+    margin-bottom: 40px; /* Espaçamento abaixo do título */
+    position: relative;
+    display: inline-block;
+  }
+
+  #extensao-curricular h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #1abc9c; /* Linha decorativa abaixo do título */
+    margin: 10px auto 0;
+    border-radius: 2px;
+  }
+
+  /* Estilo para o card do parágrafo */
+  #extensao-curricular .card {
+    background-color: rgba(50, 50, 50, 0.8); /* Cinza escuro semi-transparente */
+    color: #f4f4f9; /* Texto branco suave */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Sombra suave */
+    max-width: 800px; /* Largura máxima do card */
+    margin: 0 auto; /* Centraliza o card */
+    text-align: justify; /* Texto justificado */
+    line-height: 1.8; /* Espaçamento entre linhas */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efeito de hover suave */
+  }
+
+  /* Efeito de hover no card */
+  #extensao-curricular .card:hover {
+    transform: translateY(-5px); /* Levanta o card ao passar o mouse */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  }
+
+
+  /* RESPONSIVO EXTENSAo */
+/* Responsividade para telas menores (até 768px) */
+@media (max-width: 768px) {
+  /* Ajustes para a seção Extensão Curricular */
+  #extensao-curricular {
+    padding: 40px 15px; /* Reduz o padding para melhor aproveitamento do espaço */
+  }
+
+  /* Ajustes para o título da seção */
+  #extensao-curricular h2 {
+    font-size: 2em; /* Tamanho menor para o título em telas pequenas */
+    margin-bottom: 20px; /* Espaçamento ajustado abaixo do título */
+  }
+
+  /* Ajustes para o card */
+  #extensao-curricular .card {
+    padding: 15px; /* Padding reduzido para melhorar a legibilidade em dispositivos móveis */
+    width: 100%; /* Ocupa a largura total da tela */
+    margin: 0 auto 20px; /* Centraliza o card e adiciona margem inferior */
+    box-sizing: border-box; /* Garante que o padding não aumente a largura total */
+  }
+
+  /* Ajustes para o texto dentro do card */
+  #extensao-curricular .card p {
+    font-size: 0.95em; /* Reduz o tamanho da fonte para melhorar a legibilidade */
+    line-height: 1.6; /* Ajusta o espaçamento entre linhas */
+  }
+}
+
+
+
+
+    /* Estilo para a seção Proposta */
+    #proposta {
+      background: linear-gradient(135deg, #1a1a1a, #2c3e50);
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    #proposta h2 {
+      color: #1abc9c;
+      font-size: 2.8em;
+      margin-bottom: 40px;
+      position: relative;
+      display: inline-block;
+    }
+
+    #proposta h2::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 4px;
+      background: #1abc9c;
+      margin: 10px auto 0;
+      border-radius: 2px;
+    }
+
+    /* Estilo para o container dos cards */
+    .container-proposta {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Estilo para os cards */
+    .card {
+      background-color: rgba(50, 50, 50, 0.8);
+      color: #f4f4f9;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      width: calc(50% - 10px); /* Dois cards por linha, considerando o gap */
+      text-align: justify;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card h3 {
+      color: #1abc9c;
+      font-size: 1.5em;
+      margin-bottom: 15px;
+      text-align: center; /* Centraliza o título */
+    }
+
+    .card p {
+      line-height: 1.8;
+    }
+
+    /* Efeito de hover nos cards */
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      #proposta {
+        padding: 50px 15px;
+      }
+
+      #proposta h2 {
+        font-size: 2.2em;
+      }
+
+      .card {
+        width: 100%; /* Cards ocupam a largura total em telas menores */
+      }
+    }
+
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      #proposta {
+        padding: 50px 15px;
+      }
+
+      #proposta h2 {
+        font-size: 2.2em;
+      }
+
+      .card {
+        width: 100%;
+      }
+    }
+  /* Responsividade */
+  @media (max-width: 768px) {
+    #proposta {
+      padding: 50px 15px;
+    }
+
+    #proposta h2 {
+      font-size: 2.2em;
+    }
+
+    .card {
+      width: 100%; /* Cards ocupam a largura total em telas menores */
+    }
+  }
+
     
       /* Ajuste para telas menores */
       @media (max-width: 768px) {
@@ -328,25 +495,27 @@
     <!-- Seção Extensão Curricular -->
     <section id="extensao-curricular">
       <h2>Extensão Curricular</h2>
-      <p>
-        A Extensão Curricular é uma prática acadêmica que integra ensino,
-        pesquisa e impacto social. Seu principal objetivo é levar o conhecimento
-        universitário para além das salas de aula, conectando a academia com a
-        sociedade. Isso permite que estudantes apliquem na prática o que
-        aprendem, beneficiando tanto seu desenvolvimento quanto a comunidade.
-        Nosso projeto, o KiloCalc, é um exemplo dessa iniciativa! Criamos uma
-        plataforma acessível e gratuita para ajudar qualquer pessoa a entender
-        melhor sua Taxa Metabólica Basal (TMB) e seu gasto calórico diário.
-        Imagine que você está começando uma nova rotina alimentar ou de
-        exercícios e quer descobrir quantas calorias seu corpo realmente
-        precisa. Com o KiloCalc, basta inserir algumas informações básicas e, em
-        segundos, você terá um cálculo preciso da sua TMB. Além disso,
-        oferecemos explicações detalhadas sobre metabolismo, sugestões
-        personalizadas e dicas para otimizar sua alimentação e treinos. Tudo
-        isso 100% gratuito! Nosso compromisso é tornar o conhecimento sobre
-        nutrição mais acessível, ajudando as pessoas a tomarem decisões
-        informadas sobre sua saúde e bem-estar.
-      </p>
+      <div class="card">
+        <p>
+          A Extensão Curricular é uma prática acadêmica que integra ensino,
+          pesquisa e impacto social. Seu principal objetivo é levar o conhecimento
+          universitário para além das salas de aula, conectando a academia com a
+          sociedade. Isso permite que estudantes apliquem na prática o que
+          aprendem, beneficiando tanto seu desenvolvimento quanto a comunidade.
+          Nosso projeto, o KiloCalc, é um exemplo dessa iniciativa! Criamos uma
+          plataforma acessível e gratuita para ajudar qualquer pessoa a entender
+          melhor sua Taxa Metabólica Basal (TMB) e seu gasto calórico diário.
+          Imagine que você está começando uma nova rotina alimentar ou de
+          exercícios e quer descobrir quantas calorias seu corpo realmente
+          precisa. Com o KiloCalc, basta inserir algumas informações básicas e, em
+          segundos, você terá um cálculo preciso da sua TMB. Além disso,
+          oferecemos explicações detalhadas sobre metabolismo, sugestões
+          personalizadas e dicas para otimizar sua alimentação e treinos. Tudo
+          isso 100% gratuito! Nosso compromisso é tornar o conhecimento sobre
+          nutrição mais acessível, ajudando as pessoas a tomarem decisões
+          informadas sobre sua saúde e bem-estar.
+        </p>
+      </div>
     </section>
 
     <!-- Seção Quem Somos -->
